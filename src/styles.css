@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@400;500;600&family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@400;600&family=Lato:wght@400;700&display=swap');
+
+:root {
+    /* Colores principales */
+    --color-orange-primary: #fe5800;          /* Naranja principal */
+    --color-orange-secondary: #fe4c02;        /* Naranja más oscuro */
+    --color-gray-medium: #7a7a7b;             /* Gris medio */
+    --color-gray-dark: #333;                  /* Gris oscuro/texto */
+    --color-gray-light: #f4f4f4;              /* Gris claro/fondo */
+    
+    /* Gradientes */
+    --gradient-orange: linear-gradient(to right, #fe5800, #fe4c02);
+    --gradient-gray: linear-gradient(to right, #7a7a7b, #333);
+    --gradient-orange-light: linear-gradient(to right, #ffb121, #fe5800);
+
+    /* Tipografías) */
+    --font-title: 'Orbitron', sans-serif;
+    --font-subtitle: 'Montserrat', sans-serif;
+    --font-alt-subtitle: 'Rajdhani', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --font-alt-body: 'Source Sans Pro', sans-serif;
+    --font-extra: 'Lato', sans-serif;
+}
+
+/* Ejemplos de aplicación actualizados */
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--color-orange-primary);
+}
+
+h4, h5, h6 {
+    font-family: var(--font-subtitle);
+    color: var(--color-gray-medium);
+}
+
+p, li, span {
+    font-family: var(--font-body);
+    color: var(--color-gray-dark);
+}
+
+strong, em {
+    font-family: var(--font-alt-subtitle);
+}
+
+body{
+    margin: 0;
+}
