@@ -1,0 +1,325 @@
+.plan-footer {
+    position: relative;
+    background: var(--color-gray-dark);
+    color: white;
+    padding: 3rem 2rem 0;
+    overflow: hidden;
+    font-family: var(--font-body);
+}
+
+.plan-footer__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.plan-footer__section {
+    margin-bottom: 2rem;
+}
+
+.plan-footer__title {
+    font-family: var(--font-title);
+    color: var(--color-orange-primary);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.plan-footer__title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--color-orange-primary);
+}
+
+.plan-footer__title--terminal:after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+    background: transparent;
+    width: auto;
+    position: static;
+    margin-left: 5px;
+}
+
+.plan-footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-footer__item {
+    margin-bottom: 0.8rem;
+}
+
+.plan-footer__link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
+}
+
+.plan-footer__link:hover {
+    color: var(--color-orange-primary);
+    transform: translateX(5px);
+}
+
+.plan-footer__contact-info {
+    color: white;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.5;
+}
+
+
+.plan-footer__map-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.plan-footer__map-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.plan-footer__map-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.plan-footer__map-wrapper:hover .plan-footer__map-overlay {
+    opacity: 1;
+}
+
+.plan-footer__map-button {
+    background: var(--color-orange-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.plan-footer__map-button:hover {
+    background: var(--gradient-orange-light);
+    transform: translateY(-2px);
+}
+
+/* Estilos mejorados para la sección de copyright */
+.plan-footer__copyright {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-footer__copyright-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.plan-footer__schedule-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.plan-footer__schedule-grid {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.plan-footer__schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+}
+
+.plan-footer__schedule-days {
+    font-weight: 500;
+    color: var(--color-orange-primary);
+}
+
+.plan-footer__schedule-hours {
+    color: white;
+    font-family: var(--font-alt-subtitle);
+}
+
+.plan-footer__legal-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.plan-footer__copyright-text {
+    color: white;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.plan-footer__legal-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan-footer__contact-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-footer__contact-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.plan-footer__contact-link:hover {
+    color: var(--color-orange-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.plan-footer__highlight {
+    color: var(--color-orange-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-title);
+}
+
+.plan-footer__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.plan-footer__social-link {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.plan-footer__social-link:hover {
+    color: var(--color-orange-primary);
+    transform: translateY(-3px);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .plan-footer__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .plan-footer {
+        padding: 2rem 1.5rem 0;
+    }
+    
+    .plan-footer__copyright-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .plan-footer__legal-block {
+        order: 1;
+    }
+    
+    .plan-footer__schedule-block {
+        order: 2;
+    }
+    
+    .plan-footer__contact-block {
+        order: 3;
+    }
+    
+    .plan-footer__map-overlay {
+        opacity: 1;
+    }
+}
+
+/* Estilos para los modales */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}

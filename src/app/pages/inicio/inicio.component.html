@@ -7,85 +7,31 @@
         <h1 class="hero-title">Bienvenido a nuestra página de inicio</h1>
         <p class="hero-subtitle">PORQUE PARA LOGRAR TUS OBJETIVOS DEBES TENER UN BUEN PLAN</p>
         <div class="hero-buttons">
-            <a href="#industras" class="btn btn-secondary">Industrias que atendemos</a>
-            <a href="#elegirnos" class="btn btn-secondary">Porque elegirnos</a>
-            <a href="#proyectos_destacados" class="btn btn-secondary">Proyectos Destacados</a>
             <a href="#formulario_contacto" class="btn btn-primary">Pide tu cotización</a>
         </div>
     </div>
 </section>
 
-<section>
-    Empresas que confian en nosotros
-    <div class="logos-container">
-        <img src="/logo1.png" alt="Logo 1" class="logo">
-        <img src="/logo2.png" alt="Logo 2" class="logo">
-        <img src="/logo3.png" alt="Logo 3" class="logo">
-        <img src="/logo4.png" alt="Logo 4" class="logo">
-        <img src="/logo5.png" alt="Logo 5" class="logo">
-        <img src="/logo6.png" alt="Logo 6" class="logo">
-        <img src="/logo7.png" alt="Logo 7" class="logo">
-        <img src="/logo8.png" alt="Logo 8" class="logo">
-        <img src="/logo9.png" alt="Logo 9" class="logo">
-        <img src="/logo10.png" alt="Logo 10" class="logo">
+<section class="trusted-companies">
+    <h3>Empresas que confían en nosotros</h3>
+    <div class="bubble-carousel">
+        <div class="bubble-track" [style.transform]="transformValue">
+            <div class="bubble" *ngFor="let logo of logos">
+                <img [src]="logo.src" [alt]="logo.alt" class="logo-img">
+            </div>
+        </div>
+        <button class="carousel-control prev" (click)="moveCarousel(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-control next" (click)="moveCarousel(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </div>
 </section>
 
-
-<section class="about-section">
-    <div class="about-background">
-        <div class="background-image" style="background-image: url('/industrial-automation.jpg'); opacity: 0.15;"></div>
-        <div class="gradient-overlay"></div>
-    </div>
-
-    <div class="about-container">
-        <div class="about-header">
-            <h2 class="section-title">¿Quienes somos?</h2>
-            <p class="section-subtitle">PLAN AUTOMATION S.A. de C.V. es una firma especializada en consultoría y
-                desarrollo de proyectos en las áreas de control de procesos, automatización y PCyM (Protección, Control
-                y Monitoreo).
-            </p>
-            <div class="animated-divider">
-                <div class="line"></div>
-                <div class="circle"></div>
-                <div class="line"></div>
-            </div>
-        </div>
-
-        <div class="about-content">
-            <div class="about-card">
-                <div class="card-icon">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <h3>Misión</h3>
-                <p>Proporcionar soluciones integrales en automatización industrial.</p>
-            </div>
-
-            <div class="about-card">
-                <div class="card-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Visión</h3>
-                <p>Ser una empresa reconocida por su excelencia técnica y compromiso con el cliente.</p>
-            </div>
-
-            <div class="about-card">
-                <div class="card-icon">
-                    <i class="fas fa-industry"></i>
-                </div>
-                <h3>Nuestros Valores</h3>
-                <p>Profesionalismo, honestidad, eficiencia.</p>
-            </div>
-        </div>
-
-        <div class="about-footer">
-            <p class="highlight-text">En PLAN AUTOMATION, acompañamos a nuestros clientes en todas las etapas de sus
-                proyectos, desde el
-                diseño y la ingeniería hasta la puesta en marcha y entrega final, garantizando eficiencia, innovación y
-                calidad en cada fase.</p>
-            <button class="cta-button">Conoce nuestros proyectos <i class="fas fa-arrow-right"></i></button>
-        </div>
-    </div>
+<section id="elegirnos" class="elegirnos-section">
+    Porque elegirnos
+    Revisa nuestros proyectos
 </section>
 
 <section id="proyectos_destacados" class="proyectos-section">
@@ -96,10 +42,5 @@
     Industrias que atendemos
 </section>
 
-<section id="elegirnos" class="elegirnos-section">
-    Porque elegirnos
-</section>
 
-<button class="scroll-to-top" (click)="scrollToTop()" *ngIf="showScrollButton">
-    <i class="fas fa-arrow-up"></i>
-</button>
+
