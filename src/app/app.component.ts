@@ -10,15 +10,19 @@ import { BotonCallComponent } from "./componentes/boton-call/boton-call.componen
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent, FooterComponent, BotonTopComponent, BotonCallComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // ojo: debe ser "styleUrls" (plural)
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = 'plan_automation';
 
   ngOnInit() {
     AOS.init({
-      duration: 1000, // duración en ms
-      once: true      // animar solo una vez
+      duration: 400,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 120,
+      delay: 100
     });
   }
+
 }

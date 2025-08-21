@@ -1,0 +1,205 @@
+/* ======= Servicios Section - Estilo Premium ======= */
+.services-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  padding: 7rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo con detalles */
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: var(--gradient-orange-light);
+  opacity: 0.08;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ======= Encabezado ======= */
+.services-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+  position: relative;
+}
+
+.services-title {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  color: var(--color-gray-dark);
+  margin-bottom: 1rem;
+  background: var(--gradient-orange);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-subtitle {
+  font-family: var(--font-subtitle);
+  font-size: 1.25rem;
+  color: var(--color-gray-medium);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.title-decoration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.decoration-line {
+  width: 90px;
+  height: 3px;
+  background: var(--gradient-orange);
+}
+
+.decoration-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--gradient-orange);
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(254, 88, 0, 0.25);
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(254, 88, 0, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(254, 88, 0, 0.6); }
+}
+
+/* ======= Acordeón ======= */
+.detailed-services {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #eee;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: var(--font-subtitle);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  transition: all 0.3s ease;
+}
+
+.accordion-header i:first-child {
+  margin-right: 1rem;
+  color: var(--color-orange-primary);
+  font-size: 1.3rem;
+  min-width: 25px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header i:last-child {
+  margin-left: 1rem;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: rgba(254, 88, 0, 0.05);
+}
+
+.accordion-header.active {
+  background: rgba(254, 88, 0, 0.08);
+  color: var(--color-orange-secondary);
+}
+
+.accordion-header.active i:first-child {
+  transform: scale(1.2);
+  color: var(--color-orange-secondary);
+}
+
+.accordion-header.active i:last-child {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 2rem;
+}
+
+.accordion-content p, .accordion-content ul {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-gray-medium);
+  line-height: 1.75;
+  padding: 1rem 0 1.5rem;
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.accordion-content li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.accordion-content li i {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: var(--color-orange-primary);
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 992px) {
+  .services-title { font-size: 2.6rem; }
+  .services-subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  .services-section { padding: 5rem 0; }
+  .services-title { font-size: 2.3rem; }
+  .accordion-header { padding: 1.2rem 1.5rem; font-size: 1.05rem; }
+}
+
+@media (max-width: 576px) {
+  .services-title { font-size: 2rem; }
+  .services-subtitle { font-size: 1rem; }
+  .accordion-content { padding: 0 1.2rem; }
+}

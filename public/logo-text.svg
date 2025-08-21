@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="1056"
+   height="816"
+   viewBox="0 0 1056 816"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 1.1802e-5,0 H 792.00001 V 612 H 1.1802e-5 Z"
+         clip-rule="evenodd"
+         id="path14" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath24">
+      <path
+         d="M 14.2,279.7 H 778 V 461.75 H 14.2 Z"
+         clip-rule="evenodd"
+         id="path22" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath32">
+      <path
+         d="M 14.2,279.7 H 778 V 461.75 H 14.2 Z"
+         clip-rule="evenodd"
+         id="path30" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath44">
+      <path
+         d="M 14.2,279.7 H 778 V 461.75 H 14.2 Z"
+         clip-rule="evenodd"
+         id="path42" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath52">
+      <path
+         d="M 14.2,279.7 H 778 V 461.75 H 14.2 Z"
+         clip-rule="evenodd"
+         id="path50" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath64">
+      <path
+         d="M 14.2,279.7 H 778 V 461.75 H 14.2 Z"
+         clip-rule="evenodd"
+         id="path62" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath72">
+      <path
+         d="M 14.2,279.7 H 778 V 461.75 H 14.2 Z"
+         clip-rule="evenodd"
+         id="path70" />
+    </clipPath>
+  </defs>
+  <g
+     id="g8"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,816)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)" />
+    </g>
+    <g
+       id="g18">
+      <g
+         id="g20"
+         clip-path="url(#clipPath24)">
+        <g
+           id="g26">
+          <g
+             id="g28"
+             clip-path="url(#clipPath32)">
+            <text
+               xml:space="preserve"
+               transform="matrix(0.94869278,0,-0.31619931,-0.94869278,53.425,382.33)"
+               style="font-variant:normal;font-weight:900;font-size:75.9203px;font-family:Arial;-inkscape-font-specification:Arial-Black;writing-mode:lr-tb;fill:#ff6600;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text36"><tspan
+                 x="0 54.814426 105.45324 164.5192"
+                 y="0"
+                 id="tspan34">PLAN</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g38">
+          <g
+             id="g40"
+             clip-path="url(#clipPath44)" />
+        </g>
+        <g
+           id="g46">
+          <g
+             id="g48"
+             clip-path="url(#clipPath52)">
+            <text
+               xml:space="preserve"
+               transform="matrix(0.94869278,0,-0.31619931,-0.94869278,278.88,382.33)"
+               style="font-variant:normal;font-weight:900;font-size:63.2713px;font-family:Arial;-inkscape-font-specification:Arial-Black;writing-mode:lr-tb;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56"><tspan
+                 x="0 49.225052 101.93002 147.61188 200.31685 260.04492 309.26999 354.95184 379.56436 432.26935"
+                 y="0"
+                 id="tspan54">AUTOMATION</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g58">
+          <g
+             id="g60"
+             clip-path="url(#clipPath64)" />
+        </g>
+        <g
+           id="g66">
+          <g
+             id="g68"
+             clip-path="url(#clipPath72)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

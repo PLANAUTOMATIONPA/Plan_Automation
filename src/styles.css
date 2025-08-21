@@ -3,9 +3,9 @@
 
 :root {
     /* Colores principales */
-    --color-orange-primary: #fe5800;          /* Naranja principal */
+    --color-orange-primary: #FF6600;          /* Naranja principal */
     --color-orange-secondary: #fe4c02;        /* Naranja más oscuro */
-    --color-gray-medium: #7a7a7b;             /* Gris medio */
+    --color-gray-medium: #808080;             /* Gris medio */
     --color-gray-dark: #333;                  /* Gris oscuro/texto */
     --color-gray-light: #f4f4f4;              /* Gris claro/fondo */
     
@@ -21,6 +21,11 @@
     --font-body: 'Roboto', sans-serif;
     --font-alt-body: 'Source Sans Pro', sans-serif;
     --font-extra: 'Lato', sans-serif;
+    --font-logo: 'Eurostile Bold Extended Italic', sans-serif;
+}
+/* scroll suave en toda la app */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Ejemplos de aplicación actualizados */

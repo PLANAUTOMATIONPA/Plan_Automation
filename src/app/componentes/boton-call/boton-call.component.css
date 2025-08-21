@@ -1,28 +1,43 @@
 .button-call {
     text-decoration: none;
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 25px; /* Aumentado de 20px */
+    left: 25px; /* Aumentado de 20px */
     background-color: var(--color-orange-primary);
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Aumentado de 50px */
+    height: 60px; /* Aumentado de 50px */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
     transition: all 0.3s ease;
     z-index: 999;
 }
 
 .button-call:hover {
     background-color: var(--color-orange-dark);
-    transform: translateY(-3px);
+    transform: translateY(-5px); /* Efecto más pronunciado al hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más grande al hover */
 }
 
 .button-call i {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Aumentado de 1.2rem */
+}
+
+/* Versión responsive para móviles */
+@media (max-width: 768px) {
+    .button-call {
+        width: 55px; /* Tamaño intermedio para móviles */
+        height: 55px;
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .button-call i {
+        font-size: 1.3rem;
+    }
 }

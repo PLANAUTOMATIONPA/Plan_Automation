@@ -2,15 +2,13 @@
 /* ESTRUCTURA PRINCIPAL */
 /* ==================== */
 header {
-  background-color: white;
+  background: white;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  position: sticky;
   z-index: 1000;
-  padding: 0 2rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  height: 80px;
+  height: auto;
   max-width: 100vw;
   box-sizing: border-box;
   margin: 0 auto;
@@ -26,18 +24,33 @@ header {
   justify-content: flex-start;
   height: 100%;
   grid-column: 1;
-  padding: 0;
+  padding: 0 200px;
 }
 
 .logo {
-  height: 40px;
+  height: 90px;
   width: auto;
   transition: transform 0.3s ease;
 }
 
-.logo:hover {
-  transform: scale(1.05);
+.logo-text {
+  font-family: var(--font-logo);
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--color-orange-primary);
+  color: var(--color-gray-medium);
+  margin-left: 0.5rem;
+  letter-spacing: 1px;
 }
+
+.logo-text span {
+  font-size: 2.5rem;
+  color: var(--color-orange-primary);
+  font-family: var(--font-logo);
+}
+
 
 /* ============= */
 /* NAVEGACIÓN PRINCIPAL */
@@ -46,7 +59,7 @@ header {
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
-  height: 90%;
+  height: 100%;
   grid-column: 3;
 }
 
@@ -54,7 +67,7 @@ header {
 .nav-link {
   font-family: var(--font-subtitle);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color-gray-dark);
   text-decoration: none;
   position: relative;
@@ -93,7 +106,7 @@ header {
   position: relative;
   background: var(--gradient-orange);
   color: white !important;
-  padding: 0 2rem;
+  padding: 0 0 0 4rem;
   font-weight: 700;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: none;
@@ -106,12 +119,20 @@ header {
   height: 100%;
   overflow: hidden;
   margin-left: 1.5rem;
-  min-width: 25%;
-  border-radius: 4px;
+  font-size: 20px;
+  min-width: 40%;
   box-shadow: 0 4px 15px rgba(254, 88, 0, 0.4);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   z-index: 1;
+  /* Aplicamos el borde diagonal con clip-path */
+            clip-path: polygon(
+                15px 0%,        /* Punto superior izquierdo (inicio del corte) */
+                100% 0%,        /* Punto superior derecho */
+                100% 100%,      /* Punto inferior derecho */
+                0% 100%,        /* Punto inferior izquierdo */
+                25% 50%         /* Punto para completar el triángulo */
+            );
 }
 
 .btn-cta span {
@@ -122,9 +143,8 @@ header {
 }
 
 .btn-cta:hover {
-  background: var(--color-orange-primary);
+  background: var(--gradient-orange-light);
   box-shadow: 0 6px 20px rgba(254, 88, 0, 0.6);
-  transform: translateY(-3px);
 }
 
 .btn-cta:hover span {
@@ -152,7 +172,7 @@ header {
 .cta-pulse {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 75%;
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
@@ -172,6 +192,7 @@ header {
     height: 0;
     opacity: 0.5;
   }
+
   100% {
     width: 150px;
     height: 150px;
@@ -241,17 +262,18 @@ header {
   header {
     padding: 0 1rem;
     grid-template-columns: auto 1fr auto;
-    height: 70px;
+    height: 120px;
   }
-  
+
   .logo-container {
     padding-left: 0;
+    max-height: 1rem;
   }
-  
+
   .hamburger-btn {
     display: block;
   }
-  
+
   .nav-primary {
     position: fixed;
     top: 0;
@@ -268,18 +290,18 @@ header {
     padding-top: 5rem;
     z-index: 1000;
   }
-  
+
   .nav-primary.active {
     right: 0;
   }
-  
+
   .nav-link {
     padding: 1.5rem;
     justify-content: flex-start;
     color: var(--color-gray-dark);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
-  
+
   .nav-link::after {
     left: 1rem;
     transform: none;
@@ -289,12 +311,12 @@ header {
     width: 3px;
     transform: translateY(-50%);
   }
-  
+
   .nav-link:hover::after {
     width: 3px;
     height: 20px;
   }
-  
+
   .btn-cta {
     margin: 2rem 1.5rem 0;
     padding: 1.5rem;
@@ -302,14 +324,15 @@ header {
     border-radius: 8px;
     min-width: calc(50% - 3rem);
     justify-content: center;
+    clip-path: none;
   }
-  
+
   .cta-angle {
     display: none;
   }
-  
+
   .btn-cta span {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -317,11 +340,11 @@ header {
   header {
     padding: 0 0.5rem;
   }
-  
+
   .logo {
     height: 40px;
   }
-    
+
   .nav-primary {
     width: 85%;
   }

@@ -1,15 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { ServiciosComponenteComponent } from "../../componentes/servicios-componente/servicios-componente.component";
+import { ProyectosComponenteComponent } from "../../componentes/proyectos-componente/proyectos-componente.component";
+import { IndustriasComponenteComponent } from "../../componentes/industrias-componente/industrias-componente.component";
+import { FomularioContactoComponent } from "../../componentes/fomulario-contacto/fomulario-contacto.component";
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, ServiciosComponenteComponent, ProyectosComponenteComponent, IndustriasComponenteComponent, FomularioContactoComponent],
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
-  logos = [
+  originalLogos = [
     {
       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/1200px-Ford_logo_flat.svg.png',
       alt: 'Ford'
@@ -156,25 +161,33 @@ export class InicioComponent {
     }
   ];
 
+// Duplicamos los logos para el efecto infinito
+  logos = [...this.originalLogos, ...this.originalLogos];
+  
   currentIndex = 0;
   visibleItems = 5; // Número de logos visibles a la vez
+  itemWidth = 150 + 30; // Ancho de la burbuja + gap
 
   get transformValue(): string {
-    const bubbleWidth = 150 + 24; // Ancho de la burbuja + gap
-    return `translateX(-${this.currentIndex * bubbleWidth}px)`;
+    return `translateX(-${this.currentIndex * this.itemWidth}px)`;
   }
 
   moveCarousel(direction: number) {
     this.currentIndex += direction;
 
-    // Asegurarse de que el índice no sea menor que 0
-    if (this.currentIndex < 0) {
-      this.currentIndex = this.logos.length - this.visibleItems;
+    // Cuando llegamos al final de los logos duplicados, reiniciamos sin animación
+    if (this.currentIndex >= this.originalLogos.length) {
+      setTimeout(() => {
+        this.currentIndex = 0;
+        // Forzar la actualización de la vista
+        // (Angular normalmente detecta este cambio, pero por si acaso)
+      }, 0);
     }
-
-    // Asegurarse de que el índice no exceda el número máximo
-    if (this.currentIndex > this.logos.length - this.visibleItems) {
-      this.currentIndex = 0;
+    // Cuando retrocedemos más allá del inicio, saltamos al final
+    else if (this.currentIndex < 0) {
+      setTimeout(() => {
+        this.currentIndex = this.originalLogos.length - 1;
+      }, 0);
     }
   }
 }

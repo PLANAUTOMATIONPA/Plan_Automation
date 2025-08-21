@@ -1,46 +1,136 @@
-<section class="hero-section">
+<section class="hero-section" data-aos="fade">
     <div class="hero-image-container">
-        <img src="/hero.png" alt="Hero Image" class="hero-image">
+        <img src="/hero.png" alt="Hero Image" class="hero-image" data-aos="zoom-out" data-aos-delay="200">
         <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-        <h1 class="hero-title">Bienvenido a nuestra página de inicio</h1>
-        <p class="hero-subtitle">PORQUE PARA LOGRAR TUS OBJETIVOS DEBES TENER UN BUEN PLAN</p>
-        <div class="hero-buttons">
-            <a href="#formulario_contacto" class="btn btn-primary">Pide tu cotización</a>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">Ingeniería y Control de Procesos Industriales
+        </h1>
+        <h2 class="hero-welcome" data-aos="fade-up" data-aos-delay="400">Bienvenido a <span class="plan">PLAN </span>
+            AUTOMATION</h2>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">PORQUE PARA LOGRAR TUS OBJETIVOS DEBES TENER UN
+            BUEN PLAN</p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+            <a routerLink="/servicios" class="btn btn-primary-hero">Conoce nuestras soluciones</a>
         </div>
     </div>
 </section>
 
-<section class="trusted-companies">
-    <h3>Empresas que confían en nosotros</h3>
-    <div class="bubble-carousel">
+
+
+<section class="somos-section" data-aos="fade-up">
+    <div class="somos-container">
+        <h2 data-aos="fade-up" data-aos-delay="100">¿Quiénes somos?</h2>
+        <div class="somos-content">
+            <p class="intro-text" data-aos="fade-up" data-aos-delay="150">En <strong><span class="plan">PLAN </span>
+                    <span class="automation">AUTOMATION</span> S.A de C.V</strong> Somos una firma especializada en
+                consultoría y desarrollo de proyectos, con enfoque en el Área de control de procesos, Automatización y PCyM (Protección control y
+                monitoreo), con capacidad para brindar soluciones integrales abarcando áreas como:</p>
+
+            <ul class="specializations-list">
+                <li data-aos="fade-right" data-aos-delay="200"><i class="fas fa-cog"></i> Ingeniería Mecánica</li>
+                <li data-aos="fade-right" data-aos-delay="250"><i class="fas fa-bolt"></i> Ingeniería Eléctrica</li>
+                <li data-aos="fade-right" data-aos-delay="300"><i class="fas fa-industry"></i> Industria Alimenticia</li>
+                <li data-aos="fade-left" data-aos-delay="200"><i class="fas fa-tools"></i> Montajes Industriales</li>
+                <li data-aos="fade-left" data-aos-delay="250"><i class="fas fa-building"></i> Obra civil</li>
+            </ul>
+
+            <p class="intro-text" data-aos="fade-up" data-aos-delay="150">En <strong><span class="plan">PLAN </span>
+                    <span class="automation">AUTOMATION</span> S.A de C.V</strong> Somos especialistas en Ingeniería,
+                procuración de equipos, fabricación de tableros, instalación, programación, puesta en servicio y
+                mantenimiento para variables de proceso como:</p>
+
+            <ul class="specializations-list">
+                <li data-aos="fade-right" data-aos-delay="200"><i class="fas fa-thermometer-half"></i> Temperatura</li>
+                <li data-aos="fade-right" data-aos-delay="250"><i class="fas fa-tachometer-alt"></i> Presión</li>
+                <li data-aos="fade-right" data-aos-delay="300"><i class="fas fa-wind"></i> Flujos</li>
+                <li data-aos="fade-left" data-aos-delay="250"><i class="fas fa-vial"></i> Análisis</li>
+                <li data-aos="fade-left" data-aos-delay="200"><i class="fas fa-ruler-vertical"></i> Nivel</li>
+                <li data-aos="fade-left" data-aos-delay="250"><i class="fas fa-tint"></i> Humedad Relativa</li>
+            </ul>
+
+            <p class="closing-text" data-aos="fade-up" data-aos-delay="350">Ofrecemos servicios que abarcan desde la
+                ingeniería hasta la puesta en marcha de los proyectos.</p>
+            <button routerLink="/nosotros" class="cta-nosotros" data-aos="fade-up" data-aos-delay="400">¿Quieres saber
+                más de nosotros? <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<app-servicios-componente></app-servicios-componente>
+
+<section class="trusted-companies" data-aos="fade-up" data-aos-delay="100">
+    <h3 data-aos="fade-up" data-aos-delay="150">Empresas que confían en nosotros</h3>
+    <div class="bubble-carousel" data-aos="fade-up" data-aos-delay="200">
         <div class="bubble-track" [style.transform]="transformValue">
-            <div class="bubble" *ngFor="let logo of logos">
+            <div class="bubble" *ngFor="let logo of logos" data-aos="zoom-in" data-aos-delay="300">
                 <img [src]="logo.src" [alt]="logo.alt" class="logo-img">
             </div>
         </div>
-        <button class="carousel-control prev" (click)="moveCarousel(-1)">
+        <button class="carousel-control prev" (click)="moveCarousel(-1)" data-aos="fade-right" data-aos-delay="250">
             <i class="fas fa-chevron-left"></i>
         </button>
-        <button class="carousel-control next" (click)="moveCarousel(1)">
+        <button class="carousel-control next" (click)="moveCarousel(1)" data-aos="fade-left" data-aos-delay="250">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
 </section>
 
-<section id="elegirnos" class="elegirnos-section">
-    Porque elegirnos
-    Revisa nuestros proyectos
+<section id="elegirnos" class="elegirnos-section" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Por qué elegirnos</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="benefit-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="benefit-title">Más de 10 años de experiencia</h3>
+                <p class="benefit-description">En automatización y control industrial</p>
+            </div>
+
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="benefit-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3 class="benefit-title">Soluciones personalizadas</h3>
+                <p class="benefit-description">Adaptadas a cada cliente</p>
+            </div>
+
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="benefit-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <h3 class="benefit-title">Trabajo en campo</h3>
+                <p class="benefit-description">Soporte técnico real y presencial</p>
+            </div>
+
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="benefit-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3 class="benefit-title">Experiencia comprobada</h3>
+                <p class="benefit-description">con PLCs, HMIs, instrumentación y tableros</p>
+            </div>
+
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="benefit-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="benefit-title">Atención directa</h3>
+                <p class="benefit-description">Personal técnico, no sólo comercial</p>
+            </div>
+
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="600">
+                <div class="benefit-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3 class="benefit-title">Relación calidad-precio</h3>
+                <p class="benefit-description">Costos razonables con alta calidad</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="proyectos_destacados" class="proyectos-section">
-    Proyectos destacados
-</section>
-
-<section id="industras" class="industrias-section">
-    Industrias que atendemos
-</section>
-
-
-
+<app-proyectos-componente></app-proyectos-componente>
+<app-industrias-componente></app-industrias-componente>
+<app-fomulario-contacto></app-fomulario-contacto>
