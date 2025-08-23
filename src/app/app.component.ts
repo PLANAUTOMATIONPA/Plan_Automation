@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     AOS.init({
       duration: 400,
-      easing: 'ease-in-out',
+      easing: 'ease-out-cubic',
       once: true,
       offset: 120,
       delay: 100
