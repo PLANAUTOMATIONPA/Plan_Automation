@@ -1,299 +1,298 @@
-        /* Proyecto 1 - Parte blanca arriba */
-        .proyecto-blanco {
-            position: relative;
-             background: var(--gradient-projects2);
-            padding: 80px 0;
-            height: 500px;
-        }
+/* ============================================= */
+/* PROYECTOS                                     */
+/* ============================================= */
+.proyecto-blanco {
+    background-color: #fff;
+    padding: 60px 0;
+}
 
-        .contenedor-proyecto {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
+.proyecto-color {
+    padding: 60px 0;
+    position: relative;
+    background: linear-gradient(rgba(15, 15, 15, 0.9), rgba(87, 87, 87, 0.9)),
+        url('https://mexicoindustry.com/admin/images/notas/2025/01/general-motors-podria-transferir-produccion-de-mexico-a-eu-27134.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        .info-proyecto {
-            flex: 1;
-            padding-right: 50px;
-        }
+.contenedor-proyecto {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
 
-        .imagen-proyecto {
-            flex: 1;
-            position: relative;
-            height: 100%;
-        }
+.info-proyecto {
+    flex: 1;
+    padding-right: 40px;
+}
 
-        .imagen-proyecto img {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 80%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            z-index: 2;
-        }
+.cliente-logo img {
+    max-height: 60px;
+    margin-bottom: 20px;
+}
 
-        /* Proyecto 2 - Parte de color abajo */
-        .proyecto-color {
-            position: relative;
-            background: var(--gradient-projects);
-            padding: 80px 0;
-            height: 500px;
-        }
+.info-proyecto h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
 
-        .proyecto-color .contenedor-proyecto {
-            flex-direction: row-reverse;
-        }
+.info-proyecto p {
+    margin-bottom: 15px;
+    color: #555;
+}
 
-        .proyecto-color .info-proyecto {
-            padding-right: 0;
-            padding-left: 50px;
-            color: var(--color-white);
-        }
+.imagen-proyecto {
+    flex: 1;
+}
 
-        .proyecto-color .info-proyecto h2,
-        .proyecto-color .info-proyecto p {
-            color: var(--color-white);
-        }
+.imagen-proyecto img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .proyecto-color .imagen-proyecto img {
-            left: 0;
-            right: auto;
-        }
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
 
-        /* Botón */
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--gradient-orange);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-family: var(--font-subtitle);
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
+.btn:hover {
+    background-color: #2980b9;
+}
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
+/* ============================================= */
+/* SECCIÓN DE MARCAS                             */
+/* ============================================= */
+.brands-section {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
 
-        /* Sección de marcas - DISEÑO MEJORADO */
-        .brands-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+.brands-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: var(--font-title);
+    color: var(--color-orange-primary);
+}
 
-        .brands-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--gradient-orange);
-        }
+.brands-subtitle {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    font-family: var(--font-subtitle);
+    color: var(--color-gray-dark);
+    opacity: 0.9;
+}
 
-        .brands-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
+/* Grid general */
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .brands-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-orange);
-            border-radius: 2px;
-        }
+/* Tarjetas */
+.brand-card {
+    height: 400px;
+    perspective: 1000px;
+}
 
-        .brands-subtitle {
-            font-family: var(--font-subtitle);
-            color: var(--color-gray-medium);
-            margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.brand-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
 
-        .brands-showcase {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+.brand-card:hover .brand-card-inner {
+    transform: rotateY(180deg);
+}
 
-        .brands-carousel {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            perspective: 1000px;
-        }
+.brand-card-front,
+.brand-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-        .brand-card {
-            width: 180px;
-            height: 180px;
-            perspective: 1000px;
-            cursor: pointer;
-        }
+/* Frente (logos) */
+.brand-card-front {
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
 
-        .brand-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
+/* Reverso (productos) */
+.brand-card-back {
+    transform: rotateY(180deg);
+    background: #fff;
+    color: var(--color-gray-dark);
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
 
-        .brand-card:hover .brand-card-inner {
-            transform: rotateY(180deg);
-        }
+.brand-card-back h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
 
-        .brand-card-front, .brand-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            background: white;
-        }
+/* Logos */
+.brand-logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-        .brand-card-back {
-            transform: rotateY(180deg);
-            background: var(--gradient-orange);
-            padding: 20px;
-            flex-direction: column;
-            text-align: center;
-        }
+.brand-logo {
+    max-width: 220px;
+    object-fit: contain;
+}
 
-        .brand-card-back h3 {
-            color: white;
-            font-size: 1.2rem;
-            margin: 0 0 10px 0;
-        }
+/* Logos específicos más grandes */
+.brand-logo[alt="SEL"],
+.brand-logo[alt="Emerson"] {
+    max-width: 220px;
+}
 
-        .brand-card-back p {
-            color: white;
-            font-size: 0.9rem;
-            margin: 0;
-        }
+/* Lista de productos */
+.product-list {
+    text-align: left;
+    padding-left: 20px;
+    margin: 0;
+}
 
-        .brand-logo {
-            max-width: 120px;
-            max-height: 80px;
-            filter: grayscale(100%);
-            transition: all 0.4s ease;
-        }
+.product-list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
 
-        .brand-card:hover .brand-logo {
-            filter: grayscale(0%);
-            transform: scale(1.1);
-        }
+/* ============================================= */
+/* RESPONSIVE                                    */
+/* ============================================= */
+@media (max-width: 992px) {
+    .contenedor-proyecto {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
 
-        .brands-cta {
-            margin-top: 60px;
-        }
+    .info-proyecto {
+        padding: 0 !important;
+    }
 
-        .brands-cta p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
+    .imagen-proyecto img {
+        height: 350px;
+    }
 
-        /* Efectos de movimiento 3D para las tarjetas */
-        .brand-card:nth-child(1) { transition-delay: 0.1s; }
-        .brand-card:nth-child(2) { transition-delay: 0.2s; }
-        .brand-card:nth-child(3) { transition-delay: 0.3s; }
-        .brand-card:nth-child(4) { transition-delay: 0.4s; }
-        .brand-card:nth-child(5) { transition-delay: 0.5s; }
-        .brand-card:nth-child(6) { transition-delay: 0.6s; }
-        .brand-card:nth-child(7) { transition-delay: 0.7s; }
-        .brand-card:nth-child(8) { transition-delay: 0.8s; }
-        .brand-card:nth-child(9) { transition-delay: 0.9s; }
-        .brand-card:nth-child(10) { transition-delay: 1.0s; }
-        .brand-card:nth-child(11) { transition-delay: 1.1s; }
+    .brands-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .contenedor-proyecto {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .proyecto-blanco, .proyecto-color {
-                height: auto;
-            }
-            
-            .info-proyecto {
-                padding: 0 20px 40px !important;
-            }
-            
-            .imagen-proyecto {
-                width: 100%;
-            }
-            
-            .imagen-proyecto img {
-                position: relative;
-                transform: none;
-                width: 90%;
-                height: auto;
-                margin: 0 auto;
-            }
-            
-            .brands-carousel {
-                gap: 20px;
-            }
-            
-            .brand-card {
-                width: 140px;
-                height: 140px;
-            }
-            
-            .brand-logo {
-                max-width: 100px;
-            }
-        }
+    .brand-card {
+        height: 350px;
+    }
 
-        @media (max-width: 576px) {
-            .brand-card {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .brand-logo {
-                max-width: 80px;
-            }
-            
-            .brand-card-back {
-                padding: 10px;
-            }
-            
-            .brand-card-back h3 {
-                font-size: 1rem;
-            }
-            
-            .brand-card-back p {
-                font-size: 0.8rem;
-            }
-        }
+    .brand-logo {
+        max-width: 160px;
+    }
+
+    .info-proyecto h2 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyecto-blanco,
+    .proyecto-color {
+        padding: 70px 0;
+    }
+
+    .brands-section {
+        padding: 70px 15px;
+    }
+
+    .brands-title {
+        font-size: 2.2rem;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .brand-card {
+        height: 320px;
+    }
+
+    .info-proyecto h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brands-title {
+        font-size: 1.9rem;
+    }
+
+    .brands-subtitle {
+        font-size: 1rem;
+    }
+
+    .brand-card {
+        height: 300px;
+    }
+
+    .brand-logo {
+        max-width: 140px;
+    }
+
+    .brand-card-back {
+        padding: 20px;
+    }
+
+    .brand-card-back h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-list li {
+        font-size: 0.85rem;
+    }
+
+    .info-proyecto h2 {
+        font-size: 1.5rem;
+    }
+
+    .cliente-logo {
+        height: 50px;
+        justify-content: center;
+    }
+}
