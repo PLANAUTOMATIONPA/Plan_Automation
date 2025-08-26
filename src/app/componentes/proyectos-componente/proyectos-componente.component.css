@@ -1,298 +1,436 @@
-/* ============================================= */
-/* PROYECTOS                                     */
-/* ============================================= */
+/* ========================================================= */
+/* SECCIÓN DE PROYECTOS                                      */
+/* ========================================================= */
+
+/* ----- Sección general ----- */
+.proyectos-section > h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: var(--font-title);
+  color: var(--color-orange-primary);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.proyectos-section > h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 6px;
+  background: var(--gradient-orange);
+  margin: 20px auto 0;
+  border-radius: 6px;
+}
+
+/* ----- Título interno ----- */
+.section-title {
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 70px;
+  padding: 0 4rem;
+  font-family: var(--font-title);
+  font-weight: 800;
+  color: white;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 6px;
+  background: white;
+  margin-top: 18px;
+  margin-left: 4rem;
+  border-radius: 4px;
+}
+
+/* ----- Fondos de proyectos ----- */
+.proyecto-blanco,
+.proyecto-color {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
 .proyecto-blanco {
-    background-color: #fff;
-    padding: 60px 0;
+  background: linear-gradient(135deg, rgba(121, 43, 2, 0.85) 0%, rgba(182, 85, 20, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1509390673020-a5b2450e33f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .proyecto-color {
-    padding: 60px 0;
-    position: relative;
-    background: linear-gradient(rgba(15, 15, 15, 0.9), rgba(87, 87, 87, 0.9)),
-        url('https://mexicoindustry.com/admin/images/notas/2025/01/general-motors-podria-transferir-produccion-de-mexico-a-eu-27134.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  background: linear-gradient(rgba(15, 15, 15, 0.92), rgba(87, 87, 87, 0.92)),
+              url('https://images.unsplash.com/photo-1647427060118-4911c9821b82?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
+/* ----- Contenedor principal ----- */
 .contenedor-proyecto {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
 }
 
+.contenedor-proyecto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%);
+  z-index: 0;
+}
+
+.contenedor-proyecto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* Layout invertido */
+.proyecto-color .contenedor-proyecto {
+  flex-direction: row-reverse;
+}
+
+/* ----- Información ----- */
 .info-proyecto {
-    flex: 1;
-    padding-right: 40px;
+  flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
+.proyecto-blanco .info-proyecto { padding-right: 40px; }
+.proyecto-color .info-proyecto { padding-left: 40px; }
+
+/* Logo del cliente */
+.cliente-logo {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+.cliente-logo:hover { transform: scale(1.05); }
 .cliente-logo img {
-    max-height: 60px;
-    margin-bottom: 20px;
+  max-height: 90px;
+  object-fit: contain;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.info-proyecto h2 {
-    color: #2c3e50;
-    margin-bottom: 20px;
-    font-size: 28px;
+/* Categoría */
+.project-category {
+  display: inline-block;
+  background: var(--gradient-orange);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+/* Subtítulo */
+.project-subtitle {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  padding-bottom: 15px;
+  position: relative;
+}
+.project-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-orange);
+  border-radius: 2px;
+}
+
+/* Texto */
 .info-proyecto p {
-    margin-bottom: 15px;
-    color: #555;
+  color: #f0f0f0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
+/* ----- Imagen ----- */
 .imagen-proyecto {
-    flex: 1;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  overflow: hidden;
+  transform: translateZ(0);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
 }
-
 .imagen-proyecto img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  transition: all 0.5s ease;
 }
+.imagen-proyecto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+}
+.imagen-proyecto:hover { transform: scale(1.02); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); }
+.imagen-proyecto:hover img { transform: scale(1.05); }
+.imagen-proyecto:hover::after { opacity: 1; }
 
+/* ----- Botón ----- */
 .btn {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 32px;
+  margin-top: 25px;
+  background: var(--gradient-orange);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: var(--font-subtitle);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(255, 100, 0, 0.35);
+  position: relative;
+  overflow: hidden;
 }
-
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.6s ease;
+}
 .btn:hover {
-    background-color: #2980b9;
+  background: var(--gradient-orange-light);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(255, 100, 0, 0.5);
+}
+.btn:hover::before { left: 100%; }
+
+/* ----- Elementos decorativos ----- */
+.contenedor-proyecto .decorative-element {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gradient-orange);
+  opacity: 0.05;
+  z-index: 1;
+}
+.contenedor-proyecto .decorative-element:nth-child(1) {
+  top: -50px; right: -50px; width: 180px; height: 180px;
+}
+.contenedor-proyecto .decorative-element:nth-child(2) {
+  bottom: -70px; left: -70px; width: 220px; height: 220px;
 }
 
-/* ============================================= */
-/* SECCIÓN DE MARCAS                             */
-/* ============================================= */
+/* ========================================================= */
+/* SECCIÓN DE MARCAS                                         */
+/* ========================================================= */
+
 .brands-section {
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to top, #f8fafc, #e2e8f0);
 }
 
 .brands-title {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-family: var(--font-title);
-    color: var(--color-orange-primary);
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: var(--font-title);
+  color: var(--color-orange-primary);
+  position: relative;
+}
+.brands-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-orange);
+  margin: 15px auto 0;
+  border-radius: 4px;
 }
 
 .brands-subtitle {
-    max-width: 700px;
-    margin: 0 auto 50px;
-    font-size: 1.1rem;
-    font-family: var(--font-subtitle);
-    color: var(--color-gray-dark);
-    opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  font-family: var(--font-subtitle);
+  color: var(--color-gray-dark);
+  opacity: 0.9;
 }
 
-/* Grid general */
+/* Grid */
 .brands-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Tarjetas */
-.brand-card {
-    height: 400px;
-    perspective: 1000px;
-}
-
+.brand-card { height: 420px; perspective: 1000px; }
 .brand-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
+  width: 100%; height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
-
-.brand-card:hover .brand-card-inner {
-    transform: rotateY(180deg);
-}
+.brand-card:hover .brand-card-inner { transform: rotateY(180deg); }
 
 .brand-card-front,
 .brand-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  backface-visibility: hidden;
+  box-sizing: border-box;
 }
 
-/* Frente (logos) */
+/* Frente */
 .brand-card-front {
-    background: #fff;
-    justify-content: center;
-    align-items: center;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Reverso (productos) */
+/* Reverso */
 .brand-card-back {
-    transform: rotateY(180deg);
-    background: #fff;
-    color: var(--color-gray-dark);
-    align-items: flex-start;
-    justify-content: flex-start;
-    overflow-y: auto;
+  transform: rotateY(180deg);
+  background: #fff;
+  color: var(--color-gray-dark);
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: auto;
 }
-
 .brand-card-back h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    text-align: left;
-    width: 100%;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
 }
 
 /* Logos */
 .brand-logo-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
-
 .brand-logo {
-    max-width: 220px;
-    object-fit: contain;
+  max-width: 260px;
+  max-height: 120px;
+  object-fit: contain;
 }
-
-/* Logos específicos más grandes */
 .brand-logo[alt="SEL"],
 .brand-logo[alt="Emerson"] {
-    max-width: 220px;
+  max-width: 260px;
+  max-height: 130px;
 }
 
-/* Lista de productos */
+/* Lista productos */
 .product-list {
-    text-align: left;
-    padding-left: 20px;
-    margin: 0;
+  padding-left: 20px;
+  text-align: left;
+  margin: 0;
 }
-
 .product-list li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
-/* ============================================= */
-/* RESPONSIVE                                    */
-/* ============================================= */
+/* ========================================================= */
+/* RESPONSIVE                                                */
+/* ========================================================= */
+
+@media (max-width: 1200px) {
+  .contenedor-proyecto { gap: 40px; padding: 40px; }
+  .project-subtitle { font-size: 2rem; }
+}
+
 @media (max-width: 992px) {
-    .contenedor-proyecto {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .info-proyecto {
-        padding: 0 !important;
-    }
-
-    .imagen-proyecto img {
-        height: 350px;
-    }
-
-    .brands-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
-
-    .brand-card {
-        height: 350px;
-    }
-
-    .brand-logo {
-        max-width: 160px;
-    }
-
-    .info-proyecto h2 {
-        font-size: 1.9rem;
-    }
+  .contenedor-proyecto {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 35px;
+  }
+  .info-proyecto { padding: 0 !important; }
+  .project-subtitle::after { left: 50%; transform: translateX(-50%); }
+  .cliente-logo { text-align: center; }
+  .imagen-proyecto { width: 100%; }
+  .imagen-proyecto img { height: 350px; }
+  .section-title { padding: 0 2rem; text-align: center; }
+  .section-title::after { margin-left: auto; margin-right: auto; }
+  .brands-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .brand-card { height: 380px; }
+  .brand-logo { max-width: 200px; }
+  .info-proyecto h2 { font-size: 1.9rem; }
 }
 
 @media (max-width: 768px) {
-    .proyecto-blanco,
-    .proyecto-color {
-        padding: 70px 0;
-    }
-
-    .brands-section {
-        padding: 70px 15px;
-    }
-
-    .brands-title {
-        font-size: 2.2rem;
-    }
-
-    .brands-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .brand-card {
-        height: 320px;
-    }
-
-    .info-proyecto h2 {
-        font-size: 1.7rem;
-    }
+  .proyectos-section > h2 { font-size: 2.5rem; }
+  .section-title { font-size: 2.2rem; padding: 0 1rem; }
+  .project-subtitle { font-size: 1.8rem; }
+  .info-proyecto p { font-size: 1.1rem; }
+  .contenedor-proyecto { padding: 30px 25px; }
+  .proyecto-blanco, .proyecto-color { padding: 70px 0; }
+  .brands-title { font-size: 2.2rem; }
+  .brands-grid { grid-template-columns: 1fr; max-width: 500px; }
+  .brand-card { height: 350px; }
+  .brand-logo { max-width: 180px; }
+  .info-proyecto h2 { font-size: 1.7rem; }
 }
 
 @media (max-width: 576px) {
-    .brands-title {
-        font-size: 1.9rem;
-    }
-
-    .brands-subtitle {
-        font-size: 1rem;
-    }
-
-    .brand-card {
-        height: 300px;
-    }
-
-    .brand-logo {
-        max-width: 140px;
-    }
-
-    .brand-card-back {
-        padding: 20px;
-    }
-
-    .brand-card-back h3 {
-        font-size: 1.3rem;
-    }
-
-    .product-list li {
-        font-size: 0.85rem;
-    }
-
-    .info-proyecto h2 {
-        font-size: 1.5rem;
-    }
-
-    .cliente-logo {
-        height: 50px;
-        justify-content: center;
-    }
+  .proyectos-section > h2 { font-size: 2.2rem; }
+  .section-title { font-size: 1.9rem; margin-bottom: 50px; }
+  .project-subtitle { font-size: 1.6rem; }
+  .info-proyecto p { font-size: 1rem; }
+  .btn { padding: 14px 26px; }
+  .cliente-logo img { max-height: 70px; padding: 8px; }
+  .brands-title { font-size: 1.9rem; }
+  .brands-subtitle { font-size: 1rem; }
+  .brand-card { height: 320px; }
+  .brand-logo { max-width: 160px; }
+  .brand-card-back h3 { font-size: 1.2rem; }
+  .product-list li { font-size: 0.85rem; }
+  .info-proyecto h2 { font-size: 1.5rem; }
 }
