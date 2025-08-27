@@ -377,60 +377,109 @@
 }
 
 /* ========================================================= */
-/* RESPONSIVE                                                */
+/* RESPONSIVE COMPLETO - PROYECTOS Y MARCAS                 */
 /* ========================================================= */
 
+/* ======================== */
+/* Tablets grandes (<=1200px) */
+/* ======================== */
 @media (max-width: 1200px) {
-  .contenedor-proyecto { gap: 40px; padding: 40px; }
-  .project-subtitle { font-size: 2rem; }
-}
-
-@media (max-width: 992px) {
-  .contenedor-proyecto {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
+  .contenedor-proyecto,
+  .proyecto-blanco .contenedor-proyecto,
+  .proyecto-color .contenedor-proyecto {
+    gap: 30px;
     padding: 35px;
   }
-  .info-proyecto { padding: 0 !important; }
-  .project-subtitle::after { left: 50%; transform: translateX(-50%); }
-  .cliente-logo { text-align: center; }
-  .imagen-proyecto { width: 100%; }
-  .imagen-proyecto img { height: 350px; }
-  .section-title { padding: 0 2rem; text-align: center; }
-  .section-title::after { margin-left: auto; margin-right: auto; }
-  .brands-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-  .brand-card { height: 380px; }
+  .project-subtitle { font-size: 2rem; }
+  .section-title { padding: 0 2rem; }
+}
+
+/* ======================== */
+/* Tablets medianas / pequeños (<=992px) */
+/* ======================== */
+@media (max-width: 992px) {
+  /* Layout vertical: texto arriba, imagen abajo */
+  .contenedor-proyecto,
+  .proyecto-blanco .contenedor-proyecto,
+  .proyecto-color .contenedor-proyecto {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  /* Texto arriba */
+  .contenedor-proyecto .info-proyecto,
+  .proyecto-blanco .contenedor-proyecto .info-proyecto,
+  .proyecto-color .contenedor-proyecto .info-proyecto {
+    order: 1 !important;
+    padding: 0 !important;
+  }
+
+  /* Imagen abajo */
+  .contenedor-proyecto .imagen-proyecto,
+  .proyecto-blanco .contenedor-proyecto .imagen-proyecto,
+  .proyecto-color .contenedor-proyecto .imagen-proyecto {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+  .imagen-proyecto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Centrados y subtítulos */
+  .project-subtitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cliente-logo { text-align: center; margin-bottom: 20px; }
+  .section-title { padding: 0 1.5rem; text-align: center; }
+
+  /* Grid marcas */
+  .brands-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .brand-card { height: 360px; }
   .brand-logo { max-width: 200px; }
-  .info-proyecto h2 { font-size: 1.9rem; }
+  .info-proyecto h2 { font-size: 1.8rem; }
 }
 
+/* ======================== */
+/* Tablets pequeñas (<=768px) */
+/* ======================== */
 @media (max-width: 768px) {
-  .proyectos-section > h2 { font-size: 2.5rem; }
-  .section-title { font-size: 2.2rem; padding: 0 1rem; }
-  .project-subtitle { font-size: 1.8rem; }
-  .info-proyecto p { font-size: 1.1rem; }
-  .contenedor-proyecto { padding: 30px 25px; }
-  .proyecto-blanco, .proyecto-color { padding: 70px 0; }
-  .brands-title { font-size: 2.2rem; }
-  .brands-grid { grid-template-columns: 1fr; max-width: 500px; }
-  .brand-card { height: 350px; }
-  .brand-logo { max-width: 180px; }
-  .info-proyecto h2 { font-size: 1.7rem; }
+  .proyectos-section > h2 { font-size: 2.4rem; }
+  .section-title { font-size: 2rem; padding: 0 1rem; margin-bottom: 50px; }
+  .project-subtitle { font-size: 1.7rem; }
+  .info-proyecto p { font-size: 1rem; line-height: 1.6; }
+  .contenedor-proyecto { padding: 25px 20px; }
+  .proyecto-blanco, .proyecto-color { padding: 60px 0; }
+  .brands-title { font-size: 2rem; }
+  .brands-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+  .brand-card { height: 330px; }
+  .brand-logo { max-width: 160px; }
+  .info-proyecto h2 { font-size: 1.6rem; }
 }
 
+/* ======================== */
+/* Móviles (<=576px) */
+/* ======================== */
 @media (max-width: 576px) {
-  .proyectos-section > h2 { font-size: 2.2rem; }
-  .section-title { font-size: 1.9rem; margin-bottom: 50px; }
-  .project-subtitle { font-size: 1.6rem; }
-  .info-proyecto p { font-size: 1rem; }
-  .btn { padding: 14px 26px; }
-  .cliente-logo img { max-height: 70px; padding: 8px; }
-  .brands-title { font-size: 1.9rem; }
-  .brands-subtitle { font-size: 1rem; }
-  .brand-card { height: 320px; }
-  .brand-logo { max-width: 160px; }
-  .brand-card-back h3 { font-size: 1.2rem; }
-  .product-list li { font-size: 0.85rem; }
-  .info-proyecto h2 { font-size: 1.5rem; }
+  .proyectos-section > h2 { font-size: 2rem; margin-bottom: 40px; }
+  .section-title { font-size: 1.7rem; margin-bottom: 40px; }
+  .project-subtitle { font-size: 1.5rem; }
+  .info-proyecto p { font-size: 0.95rem; line-height: 1.6; }
+  .btn { padding: 12px 24px; font-size: 0.95rem; }
+  .cliente-logo img { max-height: 60px; padding: 6px; }
+  .brands-title { font-size: 1.7rem; }
+  .brands-subtitle { font-size: 0.95rem; }
+  .brand-card { height: 300px; }
+  .brand-logo { max-width: 140px; }
+  .brand-card-back h3 { font-size: 1.1rem; }
+  .product-list li { font-size: 0.8rem; }
+  .info-proyecto h2 { font-size: 1.4rem; }
+  .imagen-proyecto img { height: 250px; }
+  .contenedor-proyecto { padding: 20px 15px; }
+  .proyecto-blanco, .proyecto-color { padding: 50px 0; }
 }
