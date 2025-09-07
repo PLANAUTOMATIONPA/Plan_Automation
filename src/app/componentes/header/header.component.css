@@ -28,14 +28,14 @@ header {
 }
 
 .logo {
-  height: 90px;
+  height: 75px;
   width: auto;
   transition: transform 0.3s ease;
 }
 
 .logo-text {
   font-family: var(--font-logo);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   font-style: italic;
   text-decoration: underline;
@@ -46,7 +46,7 @@ header {
 }
 
 .logo-text span {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   color: var(--color-orange-primary);
   font-family: var(--font-logo);
 }
@@ -270,11 +270,15 @@ header {
   }
 
   .logo {
-    height: 65px; /* Ajuste balanceado */
+    height: 50px; /* Ajuste balanceado */
   }
 
   .logo-text {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .logo-text span {
+    font-size: 1rem;
   }
 
   .hamburger-btn {
@@ -338,11 +342,15 @@ header {
   }
 
   .logo {
-    height: 45px; /* Logo más visible en móvil */
+    height: 35px; /* Logo más visible en móvil */
   }
 
   .logo-text {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+  }
+
+   .logo-text span {
+    font-size: 0.9rem;
   }
 
   .hamburger-btn {
