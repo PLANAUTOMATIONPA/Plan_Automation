@@ -55,7 +55,7 @@
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 4rem;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   color: white;
@@ -65,7 +65,7 @@
 
 .hero-subtitle {
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   margin-bottom: 3.5rem;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   font-family: var(--font-subtitle);
@@ -97,14 +97,34 @@
   color: white;
   border-color: white;
 }
-
-@media (max-width: 768px) {
+/* Responsivo tablets */
+@media (max-width: 1024px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    padding: 2rem 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-welcome {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .hero-buttons {
