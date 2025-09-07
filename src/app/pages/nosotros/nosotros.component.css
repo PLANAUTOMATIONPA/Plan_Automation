@@ -656,7 +656,7 @@
 }
 
 /* ============================================= */
-/* MEDIA QUERIES - RESPONSIVIDAD */
+/* MEDIA QUERIES - RESPONSIVIDAD AJUSTADA */
 /* ============================================= */
 @media (max-width: 992px) {
     .section-title {
@@ -683,10 +683,7 @@
 }
 
 @media (max-width: 768px) {
-    .about-section {
-        padding: 4rem 1.5rem;
-    }
-
+    .about-section,
     .about-section-institutional {
         padding: 4rem 1.5rem;
     }
@@ -724,48 +721,44 @@
 
     .timeline-item {
         width: 100%;
-        padding-left: 2.5rem;
+        padding-left: 1.5rem;
         padding-right: 1rem;
+        margin-bottom: 1.5rem;
         text-align: left !important;
         left: 0 !important;
-        margin-bottom: 2rem;
     }
 
     .timeline-dot {
         left: 0;
         transform: none;
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         border-width: 3px;
     }
 
     .timeline-item:nth-child(odd) .timeline-content::before,
     .timeline-item:nth-child(even) .timeline-content::before {
-        left: -12px;
-        right: auto;
-        border-width: 12px 12px 12px 0;
+        left: -10px;
+        border-width: 10px 10px 10px 0;
         border-color: transparent rgba(255, 255, 255, 0.9) transparent transparent;
     }
 
     .timeline-content {
-        padding: 1rem;
+        padding: 0.8rem 1rem;
     }
 
     .timeline-content h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .timeline-content p,
     .timeline-content ul li {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 576px) {
-    .about-section {
-        padding: 3rem 1rem;
-    }
-
+    .about-section,
     .about-section-institutional {
         padding: 3rem 1rem;
     }
@@ -775,56 +768,54 @@
     }
 
     .process-steps,
-    .expertise-grid {
+    .expertise-grid,
+    .specialties-grid,
+    .discipline-list {
         grid-template-columns: 1fr;
     }
 
     .about-card,
-    .highlight-text {
-        padding: 1.5rem;
-    }
-
+    .highlight-text,
     .specialty-card {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
 
     /* ======= TIMELINE RESPONSIVO MOVIL PEQUEÑO ======= */
     .timeline-section {
-        padding: 2rem 0.5rem;
+        padding: 1rem 0.5rem;
     }
 
     .timeline-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .timeline::before {
-        left: 8px;
+        font-size: 1rem;
     }
 
     .timeline-item {
-        padding-left: 2rem;
+        padding-left: 1rem;
         padding-right: 0.5rem;
     }
 
     .timeline-dot {
-        left: 0;
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
         border-width: 2px;
     }
 
     .timeline-item:nth-child(odd) .timeline-content::before,
     .timeline-item:nth-child(even) .timeline-content::before {
-        left: -10px;
-        border-width: 10px 10px 10px 0;
+        left: -8px;
+        border-width: 8px 8px 8px 0;
+    }
+
+    .timeline-content {
+        padding: 0.6rem 0.8rem;
     }
 
     .timeline-content h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .timeline-content p,
     .timeline-content ul li {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 }

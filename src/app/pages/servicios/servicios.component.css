@@ -46,7 +46,7 @@
 
 .services-header h1 {
     font-family: var(--font-title);
-    font-size: 4.5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 1.5rem;
@@ -316,6 +316,16 @@
         grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
         gap: 2rem;
     }
+
+    .services-header h1 {
+        font-size: 3.2rem;
+        letter-spacing: 3px;
+    }
+
+    .services-header p {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -334,6 +344,23 @@
     .card-title {
         font-size: 1.25rem;
     }
+
+    .services-header {
+        padding: 4rem 1.5rem;
+        background-position: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .services-header h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+
+    .services-header p {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -347,6 +374,18 @@
 
     .services-header {
         margin-bottom: 4rem;
+        padding: 3.5rem 1rem;
+        border-bottom-width: 4px;
+    }
+
+    .services-header h1 {
+        font-size: 2.3rem;
+        letter-spacing: 2px;
+    }
+
+    .services-header p {
+        font-size: 1.1rem;
+        line-height: 1.5;
     }
 
     .services-grid {
@@ -397,6 +436,20 @@
         height: 50px;
         font-size: 1.5rem;
     }
+
+    .services-header {
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    .services-header h1 {
+        font-size: 2rem;
+    }
+
+    .services-header p {
+        font-size: 1rem;
+        padding: 0 .5rem;
+    }
 }
 
 @media (max-width: 400px) {
@@ -406,5 +459,17 @@
 
     .card-image {
         height: 190px;
+    }
+
+    .services-header {
+        padding: 2.5rem .8rem;
+    }
+
+    .services-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .services-header p {
+        font-size: 0.95rem;
     }
 }
