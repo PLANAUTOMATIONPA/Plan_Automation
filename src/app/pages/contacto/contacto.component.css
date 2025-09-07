@@ -193,30 +193,84 @@
             transform: translateY(-3px);
         }
 
-        @media (max-width: 768px) {
-            .contact-body {
-                flex-direction: column;
-            }
-            
-            .contact-name {
-                font-size: 1.5rem;
-            }
-            
-            .contact-header {
-                padding: 20px;
-            }
-            
-            .contact-logo h1 {
-                font-size: 1.8rem;
-            }
-            
-            .info-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .info-icon {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-        }
+        @media (max-width: 480px) {
+    .contact-body {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0 0.2rem;
+    }
+
+    .contact-personal,
+    .contact-details {
+        width: 100%;
+        padding: 5px;
+        min-width: auto;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .contact-name {
+        font-size: 1rem;
+    }
+
+    .contact-position {
+        font-size: 0.8rem;
+    }
+
+    .contact-header {
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .contact-logo h1 {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+    }
+
+    .contact-logo p {
+        font-size: 0.75rem;
+        margin-top: 2px;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .info-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+        margin-right: 0;
+        margin-bottom: 4px;
+        flex-shrink: 0;
+    }
+
+    .info-content h3 {
+        font-size: 0.65rem;
+        margin-bottom: 1px;
+    }
+
+    .info-content p,
+    .info-content a {
+        font-size: 0.8rem;
+        margin: 1px 0;
+        word-break: break-word;
+    }
+
+    .map-button {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .signature {
+        font-size: 0.7rem;
+        padding-top: 5px;
+    }
+}
