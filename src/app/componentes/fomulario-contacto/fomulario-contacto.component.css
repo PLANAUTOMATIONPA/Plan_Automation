@@ -263,41 +263,101 @@ select:focus~.input-underline {
   transition: color 0.3s ease;
 }
 
-/* Responsive */
+/* ========================= */
+/*      MEDIA QUERIES        */
+/* ========================= */
+
+/* Tablets */
 @media (max-width: 992px) {
   .contact-form-wrapper {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form {
+    padding: 2.5rem 2rem;
   }
 
   .contact-info {
     padding: 2rem;
+    border-radius: 0 0 15px 15px;
   }
 }
 
+/* Tablets verticales / móviles grandes */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2.3rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    padding: 0 10px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .contact-form {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
 
+/* Teléfonos medianos */
 @media (max-width: 576px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .contact-form-section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
+  }
+
+  .contact-form {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .contact-info {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .info-card {
+    padding-left: 3rem;
+  }
+
+  .info-title {
+    font-size: 1.1rem;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Teléfonos muy pequeños */
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 0.9rem 2rem;
+    font-size: 0.9rem;
   }
 }
