@@ -3,8 +3,7 @@ import { FomularioContactoComponent } from "../../componentes/fomulario-contacto
 
 @Component({
   selector: 'app-contacto',
-  imports: [FomularioContactoComponent],
-  templateUrl: './contacto.component.html',
+    templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {

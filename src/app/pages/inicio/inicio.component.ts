@@ -128,10 +128,6 @@ export class InicioComponent {
       alt: 'sanofi aventis'
     },
     {
-      src: 'armacreto',
-      alt: 'armacreto'
-    },
-    {
       src: 'https://static.wixstatic.com/media/622fa4_9f159ff841fd4bdba32c752bf5741954~mv2.jpg/v1/fill/w_270,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ml%20logo.jpg',
       alt: 'm&L Consulting Group'
     },
