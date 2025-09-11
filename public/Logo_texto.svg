@@ -1,0 +1,47 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1383 129" width="1383" height="129">
+	<title>PLAN AUTOMATION</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m-101-343h1584v1224h-1584z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m-72.6 321.6h1527.6v-364.1h-1527.6z"/>
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 22px;fill: #000000;font-family: "Calibri" } 
+		.t1 { font-size: 144px;fill: #ff6600;font-weight: 800;font-family: "Arial" } 
+		.t2 { font-size: 56px;fill: #000000;font-weight: 800;font-family: "Arial" } 
+		.t3 { font-size: 120px;fill: #808080;font-weight: 800;font-family: "Arial" } 
+		.t4 { font-size: 132px;fill: #000000;font-family: "Calibri" } 
+	</style>
+	<g id="Page 1" clip-path="url(#cp1)">
+		<text id=" " style="transform: matrix(1,0,0,1,40.65,-152.16)" >
+			<tspan x="0" y="0" class="t0"> 
+</tspan>
+		</text>
+		<g id="Mask" clip-path="url(#cp2)">
+			<text id="PLAN" style="transform: matrix(1,0,-0.333,1,5.85,116.34)" >
+				<tspan x="0" y="0" class="t1">PLAN
+</tspan>
+			</text>
+			<text id=" " style="transform: matrix(1,0,-0.333,1,437.96,116.34)" >
+				<tspan x="0" y="0" class="t2"> 
+</tspan>
+			</text>
+			<text id="AUTOMATION" style="transform: matrix(1,0,-0.333,1,456.76,116.34)" >
+				<tspan x="0" y="0" class="t3">AUTOMATION
+</tspan>
+			</text>
+			<text id=" " style="transform: matrix(1,0,0,1,1376.56,116.34)" >
+				<tspan x="0" y="0" class="t4"> 
+</tspan>
+			</text>
+			<text id=" " style="transform: matrix(1,0,0,1,-58.2,181.54)" >
+				<tspan x="0" y="0" class="t0"> 
+</tspan>
+			</text>
+		</g>
+	</g>
+</svg>

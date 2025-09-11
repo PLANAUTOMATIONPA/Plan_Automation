@@ -13,7 +13,7 @@ header {
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 /* ============= */
@@ -26,30 +26,37 @@ header {
   height: 100%;
   grid-column: 1;
   padding: 0 100px;
+  position: relative;
+}
+
+.text-vector-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
 }
 
 .logo {
-  height: 75px;
+  height: 85px;
   width: auto;
   transition: transform 0.3s ease;
+  z-index: 4; /* Asegura que el logo esté por encima del subrayado */
 }
 
-.logo-text {
-  font-family: var(--font-logo);
-  font-size: 1.5rem;
-  font-weight: 900;
-  font-style: italic;
-  text-decoration: underline;
-  text-decoration-color: var(--color-orange-primary);
-  color: var(--color-gray-medium);
-  margin-left: 0.5rem;
-  letter-spacing: 1px;
+.text-vector {
+  height: 30px;
+  width: auto;
+  position: relative;
+  z-index: 2; /* Asegura que el logo esté por encima del subrayado */
 }
 
-.logo-text span {
-  font-size: 2.0rem;
-  color: var(--color-orange-primary);
-  font-family: var(--font-logo);
+.full-width-underline {
+  position: absolute;
+  bottom: -0.1rem; /* Ajusta según sea necesario */
+  left: -1.2rem;
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  height: 2px;
+  background-color: var(--color-orange-primary);
+  z-index: 1;
 }
 
 /* ============= */
