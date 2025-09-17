@@ -36,27 +36,18 @@ header {
 }
 
 .logo {
-  height: 85px;
+  height: 75px;
+  padding: 0.5rem 0;
   width: auto;
   transition: transform 0.3s ease;
   z-index: 4; /* Asegura que el logo esté por encima del subrayado */
 }
 
 .text-vector {
-  height: 30px;
+  height: 35px;
   width: auto;
   position: relative;
   z-index: 2; /* Asegura que el logo esté por encima del subrayado */
-}
-
-.full-width-underline {
-  position: absolute;
-  bottom: -0.1rem; /* Ajusta según sea necesario */
-  left: -1.2rem;
-  width: 100vw; /* Ocupa todo el ancho de la ventana */
-  height: 2px;
-  background-color: var(--color-orange-primary);
-  z-index: 1;
 }
 
 /* ============= */
