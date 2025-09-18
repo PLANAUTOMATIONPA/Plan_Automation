@@ -86,20 +86,16 @@
                         <span class="plan-footer__schedule-days">Lunes a Viernes</span>
                         <span class="plan-footer__schedule-hours">9:00 - 18:00 hrs</span>
                     </div>
-                    <div class="plan-footer__schedule-item">
-                        <span class="plan-footer__schedule-days">Sábados</span>
-                        <span class="plan-footer__schedule-hours">9:00 - 14:00 hrs</span>
-                    </div>
                 </div>
             </div>
 
             <div class="plan-footer__legal-block">
+                
+                <p class="plan-footer__legal-links">
+                    <a href="#" class="plan-footer__link" (click)="openModal('privacy')">Aviso de privacidad</a>
+                </p>
                 <p class="plan-footer__copyright-text">
                     PLAN AUTOMATION ©2025 Todos los derechos reservados
-                </p>
-                <p class="plan-footer__legal-links">
-                    <a href="#" class="plan-footer__link" (click)="openModal('privacy')">Aviso de privacidad</a> |
-                    <a href="#" class="plan-footer__link" (click)="openModal('policy')">Políticas internas</a>
                 </p>
             </div>
 
@@ -112,14 +108,6 @@
                 </div>
             </div>
 
-            <!-- Modal para Políticas -->
-            <div id="policy-modal" class="modal" *ngIf="activeModal === 'policy'">
-                <div class="modal-content">
-                    <span class="close" (click)="closeModal()">&times;</span>
-                    <h2>Políticas y códigos de ética</h2>
-                    <p>Aquí va el contenido de tus políticas y códigos de ética...</p>
-                </div>
-            </div>
 
             <!-- Bloque de contacto rápido -->
             <div class="plan-footer__contact-block">
