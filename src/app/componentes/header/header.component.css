@@ -367,6 +367,10 @@ header {
     font-size: 0.9rem;
   }
 
+  .text-vector {
+    height: 20px;
+  }
+
   .hamburger-btn {
     padding: 5px;
   }
