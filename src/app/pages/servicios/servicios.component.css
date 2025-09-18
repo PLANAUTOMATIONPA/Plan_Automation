@@ -9,9 +9,9 @@
 
 /* Fondo con detalles mejorados */
 .services-container {
-    max-width: 1280px;
+    max-width: 100vw;
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
     padding-bottom: 2rem;
     position: relative;
     z-index: 2;
@@ -21,23 +21,25 @@
 .services-header {
     background:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-        url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')
+        center/cover no-repeat;
     color: white;
     padding: 5rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
     border-bottom: 5px solid var(--color-orange-primary);
-    width: 100vw;
+
+    /* Ajustes de ancho y centrado */
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .services-header:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image:
         radial-gradient(circle at 25% 25%, rgba(255, 102, 0, 0.1) 0%, transparent 20%),
         radial-gradient(circle at 75% 75%, rgba(254, 76, 2, 0.1) 0%, transparent 20%);
@@ -45,7 +47,7 @@
 
 .services-header h1 {
     font-family: var(--font-title);
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 1.5rem;
@@ -61,21 +63,29 @@
 
 .services-header p {
     font-family: var(--font-subtitle);
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     max-width: 800px;
     margin: 0 auto;
     color: var(--color-gray-light);
     position: relative;
     z-index: 2;
+    padding: 0 1rem;
 }
 
-/* ======= Nuevo diseño de tarjetas mejorado ======= */
+/* ======= Nuevo diseño de tarjetas centrado ======= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 2.5rem;
-    margin-top: 2.5rem;
+
+    /* Centrado horizontal */
+    max-width: 1280px;
+    margin: 2.5rem auto 0; /* auto en los lados centra la grid */
+
+    /* Centrar las tarjetas dentro de cada celda (opcional) */
+    justify-items: center;
 }
+
 
 .service-card {
     background: #fff;
@@ -87,6 +97,7 @@
     flex-direction: column;
     height: 100%;
     position: relative;
+    min-height: 420px;
     border: 1px solid rgba(254, 88, 0, 0.08);
 }
 
@@ -309,141 +320,166 @@
     animation-delay: 0.9s;
 }
 
-/* ======= Responsive Mejorado ======= */
+/* ======= Ajustes Responsivos Mejorados ======= */
+
+/* Pantallas grandes */
+@media (max-width: 1400px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+  }
+.service-card {
+min-height: 410px;
+max-height: 410px;
+}
+}
+
+/* Laptops y pantallas medianas */
 @media (max-width: 1200px) {
-    .services-grid {
-        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-        gap: 2rem;
-    }
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
 
-    .services-header h1 {
-        font-size: 3.2rem;
-        letter-spacing: 3px;
-    }
 
-    .services-header p {
-        font-size: 1.3rem;
-        padding: 0 1rem;
-    }
+.service-card    {
+min-height: 400px;
+max-height: 400px;
+  }
+
+  .services-header h1 {
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    letter-spacing: 2px;
+  }
+
+  .services-header p {
+    font-size: 1.25rem;
+  }
 }
 
+/* Tablets horizontales */
 @media (max-width: 992px) {
-    .services-title {
-        font-size: 2.8rem;
-    }
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.8rem;
+  }
 
-    .services-subtitle {
-        font-size: 1.2rem;
-    }
+  .service-card {
+    min-height: 400px;
+    max-height: 400px;
+  }
 
-    .services-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    }
+  .services-header {
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+  }
 
-    .card-title {
-        font-size: 1.25rem;
-    }
+  .services-header h1 {
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+  }
 
-    .services-header {
-        padding: 4rem 1.5rem;
-        background-position: center;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-    }
+  .services-header p {
+    font-size: 1.1rem;
+  }
 
-    .services-header h1 {
-        font-size: 2.8rem;
-        line-height: 1.2;
-    }
-
-    .services-header p {
-        font-size: 1.2rem;
-    }
+  .card-title {
+    font-size: 1.2rem;
+  }
 }
 
+/* Tablets verticales */
 @media (max-width: 768px) {
-    .services-section {
-        padding: 5rem 0;
-    }
+  .services-section {
+    padding: 4rem 0;
+  }
 
-    .services-title {
-        font-size: 2.5rem;
-    }
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
 
-    .services-header {
-        margin-bottom: 4rem;
-        padding: 3.5rem 1rem;
-        border-bottom-width: 4px;
-    }
+  .services-header {
+    padding: 3rem 1rem;
+    border-bottom-width: 4px;
+  }
 
-    .services-header h1 {
-        font-size: 2.3rem;
-        letter-spacing: 2px;
-    }
+  .services-header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+  }
 
-    .services-header p {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
+  .services-header p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-        max-width: 550px;
-        margin-left: auto;
-        margin-right: auto;
-        gap: 2rem;
-    }
+  .service-card {
+    border-radius: 12px;
+    min-height: 360px;
+    max-height: 360px;
+  }
 
-    .title-decoration {
-        margin: 2rem 0 1.5rem;
-    }
-
-    .decoration-line {
-        width: 70px;
-    }
+  .card-content {
+    padding: 1.5rem;
+  }
 }
 
+/* Móviles pequeños */
 @media (max-width: 576px) {
-    .services-title {
-        font-size: 2.2rem;
-    }
+  .services-header {
+    padding: 2.5rem 1rem;
+  }
 
-    .services-subtitle {
-        font-size: 1.1rem;
-        padding: 0 1rem;
-    }
+  .services-header h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
 
-        .card-content {
-        padding: 1.5rem;
-    }
+  .services-header p {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
 
-    .service-card ul {
-        padding: 0 1.5rem 1.5rem;
-    }
+  .card-title {
+    font-size: 1.1rem;
+  }
 
-    .card-title {
-        font-size: 1.2rem;
-    }
+  .service-card li {
+    font-size: 0.95rem;
+  }
 
-    .decoration-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
+  .services-grid {
+    gap: 1.2rem;
+  }
 
-       .services-header {
-        padding: 3rem 1rem;
-        text-align: center;
-    }
+  .card-image {
+    height: 200px;
+  }
 
-    .services-header h1 {
-        font-size: 2rem;
-    }
-
-    .services-header p {
-        font-size: 1rem;
-        padding: 0.5rem;
-    }
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
 }
 
+/* Extra pequeño: pantallas < 380px */
+@media (max-width: 380px) {
+  .services-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .services-header p {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
