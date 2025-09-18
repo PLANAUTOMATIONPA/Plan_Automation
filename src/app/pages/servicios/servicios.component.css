@@ -11,6 +11,7 @@
 .services-container {
     max-width: 1280px;
     margin: 0 auto;
+    width: 100vw;
     padding-bottom: 2rem;
     position: relative;
     z-index: 2;
@@ -28,8 +29,6 @@
     overflow: hidden;
     border-bottom: 5px solid var(--color-orange-primary);
     width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
 }
 
 .services-header:before {
@@ -415,11 +414,7 @@
         padding: 0 1rem;
     }
 
-    .services-container {
-        padding: 0 1.5rem;
-    }
-
-    .card-content {
+        .card-content {
         padding: 1.5rem;
     }
 
@@ -437,7 +432,7 @@
         font-size: 1.5rem;
     }
 
-    .services-header {
+       .services-header {
         padding: 3rem 1rem;
         text-align: center;
     }
@@ -448,28 +443,7 @@
 
     .services-header p {
         font-size: 1rem;
-        padding: 0 .5rem;
+        padding: 0.5rem;
     }
 }
 
-@media (max-width: 400px) {
-    .services-title {
-        font-size: 2rem;
-    }
-
-    .card-image {
-        height: 190px;
-    }
-
-    .services-header {
-        padding: 2.5rem .8rem;
-    }
-
-    .services-header h1 {
-        font-size: 1.7rem;
-    }
-
-    .services-header p {
-        font-size: 0.95rem;
-    }
-}
