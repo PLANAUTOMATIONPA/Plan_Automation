@@ -1,11 +1,12 @@
 <header>
-    <div class="logo-container">
-        <img src="logo_base.png" alt="Logo de la empresa" class="logo" />
-        <div class="text-vector-container">
-            <img src="logo_texto.png" alt="Nombre de la empresa" class="text-vector"/>
-            <div class="full-width-underline"></div>
-        </div>
+    <div class="logo-container" [routerLink]="['/']" style="cursor: pointer;">
+    <img src="logo_base.png" alt="Logo de la empresa" class="logo" />
+    <div class="text-vector-container">
+        <img src="logo_texto.png" alt="Nombre de la empresa" class="text-vector"/>
+        <div class="full-width-underline"></div>
     </div>
+</div>
+
 
     <!-- Botón Hamburguesa -->
     <button class="hamburger-btn" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Menú">
