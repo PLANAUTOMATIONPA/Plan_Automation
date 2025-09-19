@@ -32,7 +32,7 @@ header {
 .text-vector-container {
   position: relative;
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 3rem;
 }
 
 /* Subrayado naranja para el texto vector */
