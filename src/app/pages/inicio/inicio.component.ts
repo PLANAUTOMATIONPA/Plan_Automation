@@ -72,7 +72,7 @@ export class InicioComponent {
       alt: 'Abinbev'
     },
     {
-      src: 'https://images.seeklogo.com/logo-png/25/1/nutresa-logo-png_seeklogo-257364.png',
+      src: 'https://imgs.search.brave.com/J8cuhUaMQz1VkF8sJbPr35IFCM8YHxRVl7_u3GoS7Ww/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly92ZWN0/b3JzZWVrLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMy8w/OS9OdXRyZXNhLUxv/Z28tVmVjdG9yLnN2/Zy0ucG5n',
       alt: 'Nutresa'
     },
     {
@@ -100,7 +100,7 @@ export class InicioComponent {
       alt: 'alpura'
     },
     {
-      src: 'https://seeklogo.com/images/G/grupo-modelo-logo-9EA22ADD7F-seeklogo.com.png',
+      src: 'https://imgs.search.brave.com/qmT_tXpLAqeDvZzk7_KLsKWkZ7Fw4XjQKopZesDdbVY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z3J1cG9tb2RlbG8u/Y29tL3NpdGVzL2cv/ZmlsZXMvc2V1b3lr/NTE2L2ZpbGVzLzIw/MjItMDgvbG9nb19n/cnVwb19tb2RlbG8u/cG5n',
       alt: 'Grupo Modelo'
     },
     {
