@@ -171,6 +171,42 @@
             border-radius: 3px;
         }
 
+        .industrias-cta {
+        text-align: center;
+        background: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        margin-top: 2rem;
+      }
+
+      .industrias-cta p {
+        margin-bottom: 1.8rem;
+        font-size: 1.25rem;
+        color: var(--color-gray-dark);
+        font-family: var(--font-body);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: var(--gradient-orange);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        font-family: var(--font-subtitle);
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(254, 76, 2, 0.35);
+      }
+
         .project-content {
             padding: 2rem;
         }
