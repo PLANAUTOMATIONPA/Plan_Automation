@@ -1,0 +1,1 @@
+ng build --configuration=production --base-href="/plan_automation/" && npx angular-cli-ghpages --dir=dist/plan_automation/browser --no-silent
