@@ -2,8 +2,8 @@
     <div class="contact-form-container">
         <div class="contact-form-header" data-aos="fade-down" data-aos-delay="100">
             <h2 class="section-title">Contáctanos</h2>
-            <p class="section-subtitle">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas
-            </p>
+            <p class="section-subtitle">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas</p>
+
             <div class="header-decoration">
                 <div class="decoration-line" data-aos="zoom-in" data-aos-delay="150"></div>
                 <div class="decoration-icon" data-aos="zoom-in" data-aos-delay="200">
@@ -14,58 +14,70 @@
         </div>
 
         <div class="contact-form-wrapper">
-            <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="form-row">
-                    <div class="form-group" data-aos="fade-right" data-aos-delay="250">
-                        <label for="name" class="form-label">
-                            <i class="fas fa-user"></i> Nombre Completo
-                        </label>
-                        <input type="text" id="name" name="name" class="form-input" required>
-                        <div class="input-underline"></div>
-                    </div>
 
-                    <div class="form-group" data-aos="fade-left" data-aos-delay="300">
-                        <label for="email" class="form-label">
-                            <i class="fas fa-envelope"></i> Correo Electrónico
-                        </label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                        <div class="input-underline"></div>
-                    </div>
-                </div>
+            
+            <form class="contact-form" 
+      id="contactForm"
+      data-aos="fade-up" 
+      data-aos-delay="200" action="https://formsubmit.co/ventas@planautomation.com.mx" method="POST">
 
-                <div class="form-group" data-aos="fade-up" data-aos-delay="350">
-                    <label for="phone" class="form-label">
-                        <i class="fas fa-phone-alt"></i> Teléfono (Opcional)
-                    </label>
-                    <input type="tel" id="phone" name="phone" class="form-input">
-                    <div class="input-underline"></div>
-                </div>
+    <div class="form-row">
+        <div class="form-group" data-aos="fade-right" data-aos-delay="250">
+            <label for="name" class="form-label">
+                <i class="fas fa-user"></i> Nombre Completo
+            </label>
+            <input type="text" id="name" name="name" class="form-input" required>
+            <div class="input-underline"></div>
+        </div>
 
-                <div class="form-group" data-aos="fade-up" data-aos-delay="400">
-                    <label for="subject" class="form-label">
-                        <i class="fas fa-tag"></i> Asunto
-                    </label>
-                    <input type="text" id="subject" name="subject" class="form-input" required>
-                    <div class="input-underline"></div>
-                </div>
+        <div class="form-group" data-aos="fade-left" data-aos-delay="300">
+            <label for="email" class="form-label">
+                <i class="fas fa-envelope"></i> Correo Electrónico
+            </label>
+            <input type="email" id="email" name="email" class="form-input" required>
+            <div class="input-underline"></div>
+        </div>
+    </div>
 
-                <div class="form-group" data-aos="fade-up" data-aos-delay="450">
-                    <label for="message" class="form-label">
-                        <i class="fas fa-comment-alt"></i> Mensaje
-                    </label>
-                    <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
-                    <div class="input-underline"></div>
-                </div>
+    <div class="form-group" data-aos="fade-up" data-aos-delay="350">
+        <label for="phone" class="form-label">
+            <i class="fas fa-phone-alt"></i> Teléfono (Opcional)
+        </label>
+        <input type="tel" id="phone" name="phone" class="form-input">
+        <div class="input-underline"></div>
+    </div>
 
-                <div class="form-footer" data-aos="fade-up" data-aos-delay="500">
-                    <button type="submit" class="submit-btn">
-                        <span class="btn-text">Enviar Mensaje</span>
-                        <span class="btn-icon">
-                            <i class="fas fa-paper-plane"></i>
-                        </span>
-                    </button>
-                </div>
-            </form>
+    <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+        <label for="subject" class="form-label">
+            <i class="fas fa-tag"></i> Asunto
+        </label>
+        <input type="text" id="subject" name="subject" class="form-input" required>
+        <div class="input-underline"></div>
+    </div>
+
+    <div class="form-group" data-aos="fade-up" data-aos-delay="450">
+        <label for="message" class="form-label">
+            <i class="fas fa-comment-alt"></i> Mensaje
+        </label>
+        <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
+        <div class="input-underline"></div>
+    </div>
+
+    <!-- Contenedor para mensajes -->
+    <div id="formMessage" style="margin-top: 15px; font-size: 1.1rem;"></div>
+
+    <div class="form-footer" data-aos="fade-up" data-aos-delay="500">
+        <button type="submit" class="submit-btn">
+            <span class="btn-text">Enviar Mensaje</span>
+            <span class="btn-icon">
+                <i class="fas fa-paper-plane"></i>
+            </span>
+        </button>
+        <input type="hidden" name="_next" value="http://localhost:4200">
+        <input type="hidden" name="_captcha" value="false">
+    </div>
+</form>
+
 
             <div class="contact-info" data-aos="fade-left" data-aos-delay="550">
                 <div class="info-card">
@@ -73,18 +85,16 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3 class="info-title">Ubicación</h3>
-                    <a href="https://www.google.com/maps/dir//Colina+de+Los+Acónitos+19,+Boulevares,+53140+Naucalpan+de+Juárez,+Méx./@19.4979397,-99.3209475,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x85d2031f43c8d1e1:0x4ce61716516501e7!2m2!1d-99.2385458!2d19.4979583!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D','_blank')"
-                        target="_blank" class="info-text">Acónitos Núm. 19, Colonia Boulevares, C.P. 53140
-                        Naucalpan de Juarez, Estado de México, México.</a>
+                    <a href="https://www.google.com/maps/dir//Colina+de+Los+Acónitos+19,+Boulevares,+53140+Naucalpan+de+Juárez,+Méx./@19.4979397,-99.3209475,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x85d2031f43c8d1e1:0x4ce61716516501e7!2m2!1d-99.2385458!2d19.4979583!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D','_blank')" target="_blank" class="info-text">
+                        Acónitos Núm. 19, Colonia Boulevares, C.P. 53140 Naucalpan de Juarez, Estado de México, México.
+                    </a>
                 </div>
-
                 <div class="info-card">
                     <div class="info-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3 class="info-title">Correo Electrónico</h3>
-                    <a href="mailto:ventas@planautomation.com.mx"
-                        class="info-text">ventas@planautomation.com.mx</a>
+                    <a href="mailto:ventas@planautomation.com.mx" class="info-text">ventas@planautomation.com.mx</a>
                 </div>
 
                 <div class="info-card">
@@ -92,14 +102,13 @@
                         <i class="fas fa-phone-alt"></i>
                     </div>
                     <h3 class="info-title">Teléfonos</h3>
-                    <p>
-                    <a href="tel:+525555722177" class="info-text">+(52) 55 55 72 21 77</a></p>
-<p><a href="tel:+525555725145" class="info-text">
-+(52) 55 55 72 51 45</a></p>
-<p><a href="tel:+525555728107" class="info-text">
-+(52) 55 55 72 81 07</a></p>
+                    <p><a href="tel:+525555722177" class="info-text">+(52) 55 55 72 21 77</a></p>
+                    <p><a href="tel:+525555725145" class="info-text">+(52) 55 55 72 51 45</a></p>
+                    <p><a href="tel:+525555728107" class="info-text">+(52) 55 55 72 81 07</a></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
