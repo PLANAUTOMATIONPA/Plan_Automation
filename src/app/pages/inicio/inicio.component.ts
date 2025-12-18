@@ -131,11 +131,7 @@ export class InicioComponent {
       src: 'https://static.wixstatic.com/media/622fa4_9f159ff841fd4bdba32c752bf5741954~mv2.jpg/v1/fill/w_270,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ml%20logo.jpg',
       alt: 'm&L Consulting Group'
     },
-    {
-      src: 'https://i0.wp.com/www.especialidadestermicas.com/wp-content/uploads/2024/10/cropped-Logo-2024-1.png?resize=512%2C512&ssl=1',
-      alt: 'etsa'
-    },
-    {
+        {
       src: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/IMSS_Logos%C3%ADmbolo.png',
       alt: 'imss'
     },
