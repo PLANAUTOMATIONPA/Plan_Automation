@@ -35,34 +35,20 @@ header {
   margin-left: 3rem;
 }
 
-/* Subrayado naranja para el texto vector */
-.text-vector-container::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0px; /* Ajusta la posición vertical del subrayado */
-  width: 90%;
-  height: 3px; /* Grosor del subrayado */
-  background-color: var(--color-orange-primary); /* Color naranja primario (ajusta según tu paleta) */
-  z-index: 1;
+.logo {
+  height: 75px;
+  width: auto;
+  padding: 0.5rem 0;
+  transition: transform 0.3s ease;
+  z-index: 4; /* Asegura que el logo esté por encima del subrayado */
 }
 
 .text-vector {
-  height: 35px;
-  height: 35px;
+  height: 60px;
   width: auto;
   position: relative;
   z-index: 2; /* Asegura que la imagen esté sobre el subrayado */
 }
-
-.logo {
-  height: 60px;
-  width: auto;
-  transition: transform 0.3s ease;
-  padding: 1rem 0;
-  z-index: 4; /* Asegura que el logo esté por encima del subrayado */
-}
-
 
 /* ============= */
 /* NAVEGACIÓN PRINCIPAL */
